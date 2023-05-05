@@ -8,7 +8,7 @@ export default defineConfig({
   title: "Code Space",
   description: "",
   base: process.env.BASE_URL,
-  lang: 'zh-CN',
+  lang: "zh-CN",
   head: [
     [
       'link',
@@ -30,9 +30,9 @@ export default defineConfig({
     search: {
       provider: "algolia",
       options: {
-        appId: 'F75E9UQXRX',
-        apiKey: '268129e44d6b58950b4626bf86e8bd1e',
-        indexName: 'vue-hooks-plus-search',
+        appId: 'RS3V8EG9OW',
+        apiKey: '070eb1018943852e82c7a73b902be1f3',
+        indexName: 'code-space-search',
         placeholder: "请输入搜索的关键词",
         translations: {
           button: {
