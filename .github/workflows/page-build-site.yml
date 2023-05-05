@@ -1,43 +1,26 @@
-name: pages-build-site
+name: Deploy
+
 on:
   push:
     branches:
-      - master
+      - main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 7.9.5
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
         with:
-          node-version: "16"
-          cache: "pnpm"
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+          node-version: 16
+      - run: npm i pnpm -g
+      - run: pnpm install --frozen-lockfile
 
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Build docs
-        run: pnpm -F docs build
+      - name: Build
+        run: pnpm docs:build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.PAGE_BUILD_KEY }} // 配置在项目里的secrets
-          exclude_assets: ""
-          publish_dir: packages/docs/.vitepress/dist // 需要发布内容的路径
+          github_token: ${{ secrets.PAGE_BUILD_KEY }}
+          publish_dir: docs/.vitepress/dist
