@@ -26,6 +26,11 @@ export default defineConfig({
   ],
   themeConfig: {
     logo: packageIcon,
+    algolia: {
+      appId: 'RS3V8EG9OW',
+      apiKey: '070eb1018943852e82c7a73b902be1f3',
+      indexName: 'code-space-search',
+    },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
