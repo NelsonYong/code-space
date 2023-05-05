@@ -6,16 +6,21 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
         with:
-          version: 7.9.5
-      - uses: actions/setup-node@v3
+          node-version: 16
+
+      - uses: pnpm/action-setup@v2 // 配置使用pnpm
+        name: Install pnpm
+        id: pnpm-install
         with:
-          node-version: "16"
-          cache: "pnpm"
+          version: 7
+          run_install: false
 
       - name: Get pnpm store directory
         id: pnpm-cache
@@ -35,7 +40,7 @@ jobs:
         run: pnpm install
 
       - name: Build docs
-        run: pnpm docs:build
+        run: pnpm -F docs build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
