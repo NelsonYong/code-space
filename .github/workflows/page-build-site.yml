@@ -16,9 +16,6 @@ jobs:
         with:
           node-version: "16"
           cache: "pnpm"
-      - name: Install
-        run: |
-          pnpm install --frozen-lockfile
 
       - name: Get pnpm store directory
         id: pnpm-cache
@@ -38,7 +35,7 @@ jobs:
         run: pnpm install
 
       - name: Build docs
-        run: pnpm -F docs build
+        run: pnpm docs build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
