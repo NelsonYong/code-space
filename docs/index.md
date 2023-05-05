@@ -5,7 +5,10 @@ layout: home
 hero:
   name: "Code Space"
   text: ""
-  tagline:
+  tagline: 前端编码学习空间
+  image:
+    src: /logo.svg
+    alt: VueUse
   actions:
     - theme: brand
       text: 快速开始
