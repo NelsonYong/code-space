@@ -1,13 +1,11 @@
 import { defineConfig } from 'vitepress'
 
-const base =
-  process.env.NODE_ENV === 'production' ? '/code-space/' : ''
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Code Space",
   description: "",
-  base,
+  base: process.env.BASE_URL,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
