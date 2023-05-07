@@ -10,7 +10,10 @@ const algorithm_route: DefaultTheme.Sidebar = [{
       items: [
         {
           text: "查找-概览",
-          link: "/algorithm/search"
+          link: "/algorithm/search/"
+        }, {
+          text: "二维数组的查找",
+          link: "/algorithm/search/two-dimension-array"
         }
       ]
     },

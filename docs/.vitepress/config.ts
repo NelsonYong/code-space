@@ -46,15 +46,16 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
+      { text: '指南', link: '/guide/' },
       { text: '数据结构', link: '/data-structure/' },
       { text: '算法专题', link: '/algorithm/' },
-      { text: 'ES6+', link: '/markdown-examples' },
-      { text: 'React', link: '/markdown-examples' },
-      { text: 'Vue3', link: '/markdown-examples' },
-      { text: '服务端渲染', link: '/markdown-examples' },
-      { text: '前端构建工具', link: '/markdown-examples' },
-      { text: 'Golang', link: '/markdown-examples' },
-      { text: '数据库', link: '/markdown-examples' },
+      // { text: 'ES6+', link: '/markdown-examples' },
+      // { text: 'React', link: '/markdown-examples' },
+      // { text: 'Vue3', link: '/markdown-examples' },
+      // { text: '服务端渲染', link: '/markdown-examples' },
+      // { text: '前端构建工具', link: '/markdown-examples' },
+      // { text: 'Golang', link: '/markdown-examples' },
+      // { text: '数据库', link: '/markdown-examples' },
 
     ],
     sidebar: routers,

@@ -11,6 +11,20 @@ const data_structure_route: DefaultTheme.Sidebar = [{
         {
           text: "二叉树-概况",
           link: "/data-structure/binary-tree/"
+        },
+        {
+          text: "二叉树-基本操作",
+          link: "/data-structure/binary-tree/basic"
+        },
+        {
+          text: "二叉树的前序遍历",
+          link: "/data-structure/binary-tree/pre-order"
+        }, {
+          text: "二叉树的中序遍历",
+          link: "/data-structure/binary-tree/in-order"
+        }, {
+          text: "二叉树的后序遍历",
+          link: "/data-structure/binary-tree/post-order"
         }
       ]
     },
