@@ -47,7 +47,7 @@ const data_structure_route: DefaultTheme.Sidebar = [{
       collapsed: true,
       items: [
         {
-          text: '数组介绍', link: '/data-structure/array/'
+          text: '数组-概览', link: '/data-structure/array/'
         }
       ]
     },
