@@ -24,7 +24,7 @@ features:
   - icon: 📦
     title: 算法专题
     details: 常见算法解题指南和典型算法的 JavaScript 实现。
-  - icon: 🔑
-    title: ES6+专题
-    details: 常见 JavaScript API 的手写实现，如节流防抖等。
+  # - icon: 🔑
+  #   title: ES6+专题
+  #   details: 常见 JavaScript API 的手写实现，如节流防抖等。
 ---
