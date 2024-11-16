@@ -50,6 +50,7 @@ export default defineConfig({
       { text: '数据结构', link: '/data-structure/' },
       { text: '算法', link: '/algorithm/' },
       { text: 'Javascript', link: '/javascript/' },
+      {text:"Rust",link:"/rust/"},
       // { text: 'React', link: '/markdown-examples' },
       // { text: 'Vue3', link: '/markdown-examples' },
       // { text: '服务端渲染', link: '/markdown-examples' },
@@ -61,6 +62,6 @@ export default defineConfig({
     sidebar: routers,
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+    ],
   }
 })

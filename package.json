@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vitepress dev docs",
     "docs:build": "cross-env BASE_URL=/code-space/ vitepress build docs",
-    "docs:build-vercel":"cross-env BASE_URL=/  vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:build-vercel": "cross-env BASE_URL=/  vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "create:rust": "./shells/rust/create.sh"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,5 @@
     "cross-env": "^7.0.3",
     "vitepress": "1.0.0-alpha.75"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
